@@ -55,6 +55,7 @@ function getBookPricesStats() {
 
 function _createBooks() {
     gBooks = loadFromStorage('bookDB')
+    if (!gBooks || gBooks === null || gBooks.length === 0) initBooksData()
 }
 
 function _createBook(title, price) {
