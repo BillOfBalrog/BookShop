@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/book.css" />
+		<title>BookybookbuukbOOkbARKbARKKOOBBOOK</title>
+	</head>
+	<body onload="onInit()">
+
+		<header>
+			<h3 class="title">The Stolen Merchandise Book Shop</h3>
+			<button class="btn-display" onclick="onChangeDisplay()">Change Display</button>
+		</header>
+
+		<form class="filter">
+			<span>Search: </span>
+			<input type="text" name="otp" placeholder="Enter book title" oninput="onSetFilterByTitle(this)"></input>
+			<button class="btn-clear">Clear search</button>
+		</form>
+		
+		<form onsubmit="onAddBook(event)" class="new-book">
+			<input type="text" placeholder="Book Title"/>
+			<input type="number" placeholder="Book Price"/>
+			<button>Add Book!</button>
+		</form>
+		<table class="book-container content-table">
+			<thead>
+				<tr>
+					<th>Title</th>
+					<th>Price</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+	
+			</tbody>
+		</table>
+
+	    <div class="content-cards hide">
+		</div>
+
+		<dialog class="book-details">
+			<form method="dialog">
+				<h4><span class="details-title"></span></h4>
+				<h6>Price: <span class="details-price"></span></h6>
+				<h6>ID: <span class="details-id"></span></h6>
+				<img src="img/book.png" class="book-img"></img>
+				<div class="stars-container">
+					<span class="add-star" onclick="onAddStar(document.querySelector('.details-id').textContent)">➕</span>
+					<span class="remove-star" onclick="onRemoveStar(document.querySelector('.details-id').textContent)">➖</span>
+					<span>  Rating: </span>
+					<span class="stars"></span>
+				</div>
+				<pre></pre>
+				<button>X</button>
+			</form>
+		</dialog>
+
+		<dialog class="modal-dialog">
+			<form method="dialog">
+				<span class="modal-msg"></span>.
+				<button>X</button>
+			</form>
+		</dialog>
+
+		<div class="ihatethis"></div>
+		<footer>
+			<h3>bOOOring statistics:</h3>
+			<span class="mama-span">Expensive: <span class="expensive"></span>     Average: <span class="average"></span>    Cheap: <span class="cheap"></span></span>
+		</footer>
+
+		<script src="js/services/util.service.js"></script>
+		<script src="js/services/storage.service.js"></script>
+		<script src="js/local-storage-demo.js"></script>
+		<script src="js/services/book.service.js"></script>
+		<script src="js/book.controller.js"></script>
+		
+	</body>
+</html>
+
+

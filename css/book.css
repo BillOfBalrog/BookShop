@@ -1,0 +1,225 @@
+/* CSS WHY YOU SO ANNOYING ALWAYS */
+ * {
+    box-sizing: border-box;
+}
+
+:root {
+    --container-padding: 10px
+}
+
+button {
+    cursor: pointer;
+}
+
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.new-book,
+.filter {
+    padding: 15px var(--container-padding);
+    background-color: rgb(176, 222, 199);
+}
+
+.todo-list {
+    padding: var(--container-padding);
+    list-style: none;
+    flex-grow: 1;
+}
+
+.todo-list li {
+    display: flex;
+    padding: 15px var(--container-padding);
+    border-radius: 3px;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.todo-list li:nth-child(odd) {
+    background-color: rgb(210, 210, 210);
+}
+
+.todo-list li span {
+    flex-grow: 1;
+}
+
+h1.title {
+    padding-inline: var(--container-padding);
+}
+
+.book-details {
+  max-width: 250px;
+}
+
+.done {
+    text-decoration: line-through;
+}
+ 
+ footer {
+    display: flex;
+    gap: 50px;
+    background-color: lightsteelblue;
+    padding: 15px var(--container-padding);
+} 
+
+.content-table {
+  font-size:0.9em;
+  border-collapse: collapse;
+  /* margin: 25px; */
+  min-width: 400px;
+  max-width: 800px;
+  /* display:flex */
+}
+
+.content-table thead tr, header{
+  color: #ffffff;
+  background: #009879;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+.content-table tbody tr {
+  border-bottom: 2px solid #dddddd;
+  border-left: 2px solid #009879;
+  border-right: 2px solid #009879;
+}
+
+.content-table tbody td {
+  border-left: 2px solid #009879;
+  border-right: 2px solid #009879;
+  white-space: nowrap; /* Prevents text from wrapping */
+  overflow: hidden; 
+  text-overflow: ellipsis;
+}
+
+.book-img {
+  height: 50px;
+  width: 50px;
+}
+
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+.content-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  border: 3px solid #333; 
+  padding: 10px;
+  border-radius: 10px; 
+}
+
+.table-price,.table-action {
+  text-align: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 2px;
+  justify-content: center;
+  border: 1px solid #b5b4b4;
+  border-radius: 10px;
+
+  flex-basis: 50px;
+  flex-grow: 1;
+
+  background-color: white;
+  min-width: 200px;
+  min-height: 50px;
+  max-height:250px;
+  max-width: 250px;
+  align-items: start;
+}
+
+.action-btn {
+  margin-top: -20px;
+}
+
+.action-header {
+  margin-top: -10px;
+}
+
+.price-header {
+  margin-top: -10px;
+}
+
+.card-title {
+  color: #ffffff;
+  background: #009879;
+  /* text-align: center; */
+  font-weight: bold;
+  align-items: top;
+}
+
+.ihatethis {
+  display: flex;
+  flex-grow:1;
+}
+
+
+/* footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px; 
+  background-color: #17a76b; 
+  color: white; 
+  text-align: center;
+  line-height: 50px;
+} 
+*/
+
+
+
+footer {
+  padding: 10px;
+  background-color: #009879;
+  color: #ffffff;
+  /* position: absolute; */
+  /* bottom:0; */
+  /* width: 200vh; */
+
+}
+
+footer h3 {
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+footer .average,
+footer .expensive {
+    margin-inline-end: 20px;
+}
+
+.hide {
+  display: none;
+}
+
+header {
+  font-size: 20px;
+  padding-block: 10px;
+  font-weight: bold;
+  text-shadow: rgba(18, 194, 59, 0.74) 2px 3px 4px;
+  text-align: center;
+}
+.content-table tbody .oos-msg {
+  border-right:none;
+}
+
+.mama-span {
+  margin-top: 3px;
+}
+
